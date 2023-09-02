@@ -43,7 +43,7 @@
                 <span>&nbsp;.&nbsp;</span><span id="readout2"></span><br />
             </p>
             <p class = "console"> 
-                <span>&nbsp;>&nbsp;</span><span id="readout1">Welcome to Block Production to Decentralization</span><span id="cursor" class = "pulsate">|</span>
+                <span>&nbsp;>&nbsp;</span><span id="readout1">Welcome to Block Validation to Decentralization</span><span id="cursor" class = "pulsate">|</span>
             </p>
             
         </div> 
@@ -64,7 +64,7 @@
             
         <div id="leftColumn">
         
-        <button class = "button2" id ="btnMakePaperclip" onclick="clipClick(1)">Stake Ether</button><br />
+        <button class = "button2" id ="btnMakePaperclip" onclick="clipClick(1)">Stake Ether Manually</button><br />
         <br />
         
         <div id = "creationDiv">
@@ -242,38 +242,37 @@
         <hr>
         
             
-        Expected Transaction Fee Revenue (Validation Revenue): $ <span id="funds">0</span><br />
+        Total Balance: $ <span id="funds">0</span><br />
         <div id="revPerSecDiv">  
            
         Avg. Rev. per sec: $ <span id="avgRev">0</span><br />
         Avg. Clips Sold per sec: <span id="avgSales">0</span><br />    
             
         </div>  
-        Unsold Inventory: <span id="unsoldClips">0</span><br /> 
+        Transactions Available for Validation: <span id="unsoldClips">0</span><br /> 
             
         <button class = "button2" id = "btnLowerPrice"
         onclick="lowerPrice()">lower</button>
         <button class = "button2" id = "btnRaisePrice"
         onclick="raisePrice()">raise</button>
-        Minimum Gas Fee per Transaction: $ <span id="margin">.50</span><br />
+        Threshold for Minimum Gas Fee: $ <span id="margin">.50</span><br />
             
-        Public Demand for Initiating New Transaction: <span id="demand">10</span>%<br />
+        User Demand for Validation: <span id="demand">10</span>%<br />
         <br />    
         
         <button class = "button2" id = "btnExpandMarketing"
-        onclick="buyAds()">Marketing</button> <span class = "engineText6"> Level: </span><span class = "engineText6" id="marketingLvl">1</span><br />
-        Cost: $ <span id="adCost">100.00</span><br />
+        onclick="buyAds()">The Length of Activation Queue</button> <span class = "engineText6"> Low: </span><span class = "engineText6" id="marketingLvl">1</span><br />
+        Wait Time in Blocks: blocks <span id="adCost">10</span><br />
         <br />    
-        
         
             
         </div>   
         
         <div id="manufacturingDiv">
-        <b>Manufacturing</b><br />
+        <b>Total Number of Nodes/Node Diversification</b><br />
         <hr>
         
-        Clips per Second: <span id="clipmakerRate">0</span><br />
+        The Number of Ethers Staked per Second: <span id="clipmakerRate">0</span><br />
         <br /> 
             
         <div id = "wireBuyerDiv">
@@ -283,14 +282,14 @@
           
             
         <button class = "button2" id ="btnBuyWire"
-        onclick="buyWire()">Wire</button> <span class = "engineText6" id="wire">1000</span><span class = "engineText6"> inches</span><br /> 
-        Cost: $ <span id="wireCost">20</span><br />
+        onclick="buyWire()">Total Number of Ethers Available for Staking</button> <span class = "engineText6" id="wire">100</span><span class = "engineText6"> ethers</span><br /> 
+        Price per ether: $ <span id="wireCost">1500</span><br />
         <br />
             
         <div id = "autoClipperDiv">
         <p class = "engineText5">
         <button class = "button2" id = "btnMakeClipper"
-        onclick="makeClipper()">AutoClippers</button> <span class = "engineText6" id="clipmakerLevel2">0</span></p>
+        onclick="makeClipper()">Automate Ether Staking</button> <span class = "engineText6" id="clipmakerLevel2">0</span></p>
         Cost: $ <span id="clipperCost">5.00</span><br />
         <br />
         </div>    
