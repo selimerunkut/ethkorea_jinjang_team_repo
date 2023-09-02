@@ -30,8 +30,8 @@ To get started with Scaffold-ETH 2, follow the steps below:
 1. Clone this repo & install dependencies
 
 ```
-git clone https://github.com/scaffold-eth/scaffold-eth-2.git
-cd scaffold-eth-2
+git clone https://github.com/selimerunkut/ethkorea_jinjang_team_repo
+cd ethkorea_jinjang_team_repo
 yarn install
 ```
 
