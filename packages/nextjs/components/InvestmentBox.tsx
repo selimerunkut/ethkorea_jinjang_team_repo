@@ -83,13 +83,15 @@ interface InvestmentBox {
     spillFakeNewsCost: number;
     targetingEveryScientistCost: number;
     swarmCost: number;
+    debug: boolean;
 
 }
 
 const InvestmentBox = (props: InvestmentBox) => {
 
+
     //Determining the first div class
-    var className = props.soldAtLeastOnePaperclip == 0 ? "investment-box interface-div" : "investment-box interface-div visible-left-div"
+    var className = (props.soldAtLeastOnePaperclip == 0) ? "investment-box interface-div" : "investment-box interface-div visible-left-div"
 
     // R&D button disabling
     if (props.rdLevelOfInvestment > 5) {
@@ -163,7 +165,7 @@ const InvestmentBox = (props: InvestmentBox) => {
     }
 
     // Factory disabling
-    if (props.hasFoundNewsWaysToMakePaperclips) {
+    if (props.hasFoundNewsWaysToMakePaperclips || props.debug == true) {
         var classNameFactoryButton = "factory menu-button";
     }
     else {
@@ -373,14 +375,14 @@ const InvestmentBox = (props: InvestmentBox) => {
                 <div>
                     <h3>{props.text.gameTitles.machines[props.lang]}</h3>
                     <div>
-                        <Button onClickProp={props.buyAMachine} money={props.money} machineProductivity={3} picture="./pictures/small-machine.png" classNameButton="small-machines-button menu-button investment-button" cost={5} classNameChild="info-small-machines-button" contentChild={props.text.gameButtons.investmentSmallMachineText} isManual={true} machineQuantity={1} name={props.text.gameButtons.investmentSmallMachine} machineType="smallMachine" createAndRemoveGraphicEffect={props.createAndRemoveGraphicEffect} containsAnimation={true} id='small-Machine-Button' textAnimation="+3" animationIdTarget='ul-main-number' animationTypeOfElementCreated='li' animationCSSClass='graphInputOrange' lang={props.lang} />
+                        <Button onClickProp={props.buyAMachine} money={props.money} machineProductivity={3} picture="./pictures/ether.png" classNameButton="small-machines-button menu-button investment-button" cost={5} classNameChild="info-small-machines-button" contentChild={props.text.gameButtons.investmentSmallMachineText} isManual={true} machineQuantity={1} name={props.text.gameButtons.investmentSmallMachine} machineType="smallMachine" createAndRemoveGraphicEffect={props.createAndRemoveGraphicEffect} containsAnimation={true} id='small-Machine-Button' textAnimation="+3" animationIdTarget='ul-main-number' animationTypeOfElementCreated='li' animationCSSClass='graphInputOrange' lang={props.lang} />
                     </div>
                 </div>
 
-                {props.rdLevelOfInvestment > 2
+                {(props.rdLevelOfInvestment > 2 || props.debug == true)
                     ? <div>
                         <div>
-                            <ButtonAutomaticData onClickProp={props.buyAMachine} money={props.money} picture="./pictures/automatic-machine.png" name={props.text.gameButtons.investmentAutomaticMachineName} classNameButton={classNameAutomaticMachine} cost={props.smallAutomaticMachineCost} classNameChild="info-automatic-machines-button" contentChild={props.text.gameButtons.investmentAutomaticMachineContent} automaticProductivityPerMachine={props.productivyPerAutomaticMachine} isManual={false} machineQuantity={1} machineType="smallAutomaticMachine" machineProductivity={props.smallAutomaticMachineProductivity} numberOfSmallAutomaticMachines={props.numberOfSmallAutomaticMachines} maximumSmallAutomaticMachine={props.SmallAutomaticMachine} lang={props.lang} />
+                            <ButtonAutomaticData onClickProp={props.buyAMachine} money={props.money} picture="./pictures/salesman.png" name={props.text.gameButtons.investmentAutomaticMachineName} classNameButton={classNameAutomaticMachine} cost={props.smallAutomaticMachineCost} classNameChild="info-automatic-machines-button" contentChild={props.text.gameButtons.investmentAutomaticMachineContent} automaticProductivityPerMachine={props.productivyPerAutomaticMachine} isManual={false} machineQuantity={1} machineType="smallAutomaticMachine" machineProductivity={props.smallAutomaticMachineProductivity} numberOfSmallAutomaticMachines={props.numberOfSmallAutomaticMachines} maximumSmallAutomaticMachine={props.SmallAutomaticMachine} lang={props.lang} />
                             {props.rdLevelOfInvestment > 3 ?
                                 <ButtonAutomaticData onClickProp={props.buyAMachine} money={props.money} picture="./pictures/x5.png" name={props.text.gameButtons.investment5AutomaticMachineName} classNameButton={classNameAutomaticMachine} cost={50} classNameChild="info-automatic-machinesx5-button" contentChild={props.text.gameButtons.investmentAutomaticMachineContent} automaticProductivityPerMachine={props.productivyPerAutomaticMachine} machineQuantity={5} isManual={false} machineType="smallAutomaticMachine" machineProductivity={props.smallAutomaticMachineProductivity} numberOfSmallAutomaticMachines={props.numberOfSmallAutomaticMachines} maximumSmallAutomaticMachine={props.maximumSmallAutomaticMachine} lang={props.lang} />
                                 : null}
@@ -389,35 +391,35 @@ const InvestmentBox = (props: InvestmentBox) => {
                     : null}
 
 
-                {props.numberOfSmallMachines > 0 ?
+                {(props.numberOfSmallMachines > 0 || props.debug == true)?
                     <div>
                         <h3 className="sales-title">{props.text.gameTitles.sales[props.lang]}</h3>
-                        <Button onClickProp={props.investInSales} name={props.text.gameButtons.salesCallACustomerName} picture="./pictures/euros_symbol.png" classNameButton="invest-marketing-button menu-button investment-button" cost={props.salesCost} classNameChild="info-invest-marketing-button" contentChild={props.text.gameButtons.salesCallACustomerContent} createAndRemoveGraphicEffect={props.createAndRemoveGraphicEffect} money={props.money} containsAnimation={true} id='sales-button' textAnimation="+ 5" animationIdTarget='sell-area' animationTypeOfElementCreated='li' animationCSSClass='graphInputBig' lang={props.lang} />
+                        {/* <Button onClickProp={props.investInSales} name={props.text.gameButtons.salesCallACustomerName} picture="./pictures/euros_symbol.png" classNameButton="invest-marketing-button menu-button investment-button" cost={props.salesCost} classNameChild="info-invest-marketing-button" contentChild={props.text.gameButtons.salesCallACustomerContent} createAndRemoveGraphicEffect={props.createAndRemoveGraphicEffect} money={props.money} containsAnimation={true} id='sales-button' textAnimation="+ 5" animationIdTarget='sell-area' animationTypeOfElementCreated='li' animationCSSClass='graphInputBig' lang={props.lang} /> */}
                     </div>
                     : null}
-                {(props.rdLevelOfInvestment > 2 && props.numberOfSmallAutomaticMachines > 3) ?
-                    <Button onClickProp={props.hireASalesman} name={props.text.gameButtons.salesHireSalesman} picture="./pictures/salesman.png" classNameButton="salesman-button menu-button investment-button" cost={props.salesmanCost} classNameChild="info-salesman-button" contentChild={props.text.gameButtons.salesHireSalesmanContent} money={props.money} maximumSalesHirable={props.maximumSalesHirable} salesman={props.salesman} lang={props.lang} />
+                {(props.rdLevelOfInvestment > 2 && props.numberOfSmallAutomaticMachines > 3) || props.debug == true ?
+                    <Button onClickProp={props.hireASalesman} name={props.text.gameButtons.salesHireSalesman} picture="./pictures/mev-bot.png" classNameButton="salesman-button menu-button investment-button" cost={props.salesmanCost} classNameChild="info-salesman-button" contentChild={props.text.gameButtons.salesHireSalesmanContent} money={props.money} maximumSalesHirable={props.maximumSalesHirable} salesman={props.salesman} lang={props.lang} />
                     : null}
-                {props.rdLevelOfInvestment > 3 ?
+                {props.rdLevelOfInvestment > 3 || props.debug == true ?
                     <Button onClickProp={props.buyFiveSales} picture="./pictures/x5.png" name={props.text.gameButtons.salesHire5SalesmenName} classNameButton="salesman-button menu-button investment-button" cost={props.salesmanCost * 5} classNameChild="salesman-machines-button" contentChild={props.text.gameButtons.salesHire5SalesmenContent} money={props.money} maximumSalesHirable={props.maximumSalesHirable} salesman={props.salesman} lang={props.lang} />
                     : null}
 
-                {props.officeLevelUpgrade > 1 ?
+                {props.officeLevelUpgrade > 1 || props.debug == true ?
                     <Button onClickProp={props.hireAManager} name={props.text.gameButtons.salesHireAManagerName} picture="./pictures/manager.png" classNameButton="rd-hire-manager menu-button investment-button" cost={props.managerCost} classNameChild="info-hire-manager" contentChild={props.text.gameButtons.salesHireAManagerContent} money={props.money} maximumSalesHirable={props.maximumSalesHirable} salesman={props.salesman} lang={props.lang} />
                     : null}
 
-                {props.salesLevelOfInvestment > 3 &&
+                {props.salesLevelOfInvestment > 3 || props.debug == true &&
                     <div><h3>{props.text.gameTitles.researchAndDevelopment[props.lang]}</h3>
                         <div><Button onClickProp={props.investRD} name={props.text.gameButtons.investInRD} picture="./pictures/invest-in-research-and-development.png" classNameButton={classNameRDButton} cost={props.rdCost} classNameChild="info-invest-rd-button" contentChild={props.text.gameButtons.investInRDContent} money={props.money} lang={props.lang} />
                             {props.rdLevelOfInvestment > 4 && <Button onClickProp={props.buyOffice} name={props.text.gameButtons.buyNewOfficesName} picture="./pictures/new_office.png" classNameButton="office-button menu-button investment-button" cost={props.officeCost} classNameChild="info-buy-office-button" contentChild={props.text.gameButtons.buyNewOfficesContent} money={props.money} lang={props.lang} />}
 
 
-                            {props.rdLevelOfInvestment > 5 && props.softwareLevelOfInvestment < 1 ?
+                            {props.rdLevelOfInvestment > 5 && props.softwareLevelOfInvestment < 1 || props.debug == true ?
                                 <Button onClickProp={props.investInSoftware} name={props.text.gameButtons.installSoftwareName} picture="./pictures/software-program.png" classNameButton="rd-install-software menu-button investment-button" cost={props.softwareCost} classNameChild="info-invest-rd-install-software" contentChild={props.text.gameButtons.installSoftwareContent} money={props.money} lang={props.lang} />
                                 : null}
                         </div></div>}
 
-                {props.rdLevelOfInvestment > 4
+                {props.rdLevelOfInvestment > 4 || props.debug == true
                     ? <div><h3>{props.text.gameTitles.expansion[props.lang]}</h3><div>
                         <ButtonAutomaticData onClickProp={props.buyAMachine} money={props.money} name={props.text.gameButtons.factoryName} picture="./pictures/factory.png" classNameButton="factory-button menu-button investment-button" cost={props.factoryCost} classNameChild="info-buy-factory-button" contentChild={props.text.gameButtons.investmentAutomaticMachineContent} isManual={false} machineType="factory" machineProductivity={10000} machineQuantity={1} automaticProductivityPerMachine={props.productivyPerAutomaticMachine} lang={props.lang} /></div></div>
                     : null}
@@ -425,7 +427,7 @@ const InvestmentBox = (props: InvestmentBox) => {
         </div>}
 
 
-            {props.cloudConnectionEstablished && <div className={className}>
+            {props.cloudConnectionEstablished || props.debug == true && <div className={className}>
                 <h2 className="AI-context">{props.text.gameTitles.aiExecution[props.lang]}</h2>
                 <div className="padding-div">
 

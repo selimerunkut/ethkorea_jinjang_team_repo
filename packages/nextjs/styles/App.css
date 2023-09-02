@@ -175,6 +175,9 @@ header {
     margin-top: 1rem;
     background-color: rgb(255, 255, 255);
 }
+.interface-div p {
+    color: black;
+}
 
 h2 {
     margin-top: 0;
@@ -257,6 +260,18 @@ div>h3 {
 /***************************
   ****INVESTMENT GLOBAL BOX****
   ***************************/
+
+.automatic-machines-button{
+    background-size: 50px;
+}
+
+.small-machines-button {
+    background-size: 40px;
+}
+
+.salesman-button {
+    background-size: 50px;
+}
 
 .investment-box {
     opacity: 0;
@@ -531,10 +546,12 @@ button.disabled:hover {
 
 .hover-button {
     padding: .5rem;
+    color: black;
 }
 
 .hover-name {
     font-weight: bold;
+    color: black
 }
 
 /***************************

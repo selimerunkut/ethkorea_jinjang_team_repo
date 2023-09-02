@@ -47,7 +47,9 @@ const SellButton = (props: SellButtonProps) => {
     }
     return (
         <button onClick={props.sell} className="main-button" id="sell-button-id">
-            <p className="main-button-firstline">{props.text.mainButtons.sellButtonSell[props.lang]}</p><ul className="main-button-number" id="sell-area"><li>{numberOfPaperclipToSell}</li></ul><p className="main-button-secondline">{props.unitsSold > 2 ? props.text.mainButtons.mainButtonPaperclipMultiple[props.lang] : props.text.mainButtons.mainButtonPaperclipSingle[props.lang]}</p>
+            <p className="main-button-firstline">{props.text.mainButtons.sellButtonSell[props.lang]}
+            </p><ul className="main-button-number" id="sell-area"><li>{numberOfPaperclipToSell}</li></ul>
+            <p className="main-button-secondline">{props.unitsSold > 2 ? "Transactions" : "Transaction"}</p>
         </button>);
 
 }

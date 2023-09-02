@@ -42,11 +42,12 @@ interface SoftwareProps {
     dataCenterCost: number;
     terraformingIslandIntoServersCost: number;
     quantumComputerCost: number;
+    debug: boolean;
 
 }
 const Software = (props: SoftwareProps) => {
 
-    var className = props.softwareLevelOfInvestment > 0 ? "interface-div software-div visible-right-div" : "interface-div software-div";
+    var className = props.softwareLevelOfInvestment > 0 || props.debug == true ? "interface-div software-div visible-right-div" : "interface-div software-div";
 
     // Website button disabling
     if (props.websiteIsOnline) {
@@ -57,7 +58,7 @@ const Software = (props: SoftwareProps) => {
     }
 
     // Connect to Every Marketplace
-    if (props.deepLearningHasBeenBought && !props.hasBoughtSoftwareSelling) {
+    if (props.deepLearningHasBeenBought && !props.hasBoughtSoftwareSelling || props.debug == true) {
         var classNameConnectMarketplaceButton = "software menu-button";
     }
     else {
@@ -204,7 +205,7 @@ const Software = (props: SoftwareProps) => {
 
     //Computational Power update 
     var data;
-    if (props.droneLevelOfInvestment == 1) {
+    if (props.droneLevelOfInvestment == 1 || props.debug == true) {
         data = props.computationalPowerPerSecond + props.numberOfDrone;
     }
     else if (props.droneLevelOfInvestment > 1) {
