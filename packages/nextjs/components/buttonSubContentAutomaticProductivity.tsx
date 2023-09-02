@@ -84,31 +84,31 @@ const ButtonSubContentAutomaticProductivity = (props: ButtonSubContentProps) => 
         }
         else if (number >= Math.pow(10, 6) && number < Math.pow(10, 9)) {
             // @ts-ignore
-            number = formateNumber(number, Math.pow(10, 6), subContent.gameTitles.unitDisplayMillions[this.props.lang]);
+            number = formateNumber(number, Math.pow(10, 6), subContent.gameTitles.unitDisplayMillions[props.lang]);
         }
         else if (number >= Math.pow(10, 9) && number < Math.pow(10, 12)) {
             // @ts-ignore
-            number = this.formateNumber(number, Math.pow(10, 9), subContent.gameTitles.unitDisplayBillions[this.props.lang]);
+            number =formateNumber(number, Math.pow(10, 9), subContent.gameTitles.unitDisplayBillions[props.lang]);
         }
         else if (number >= Math.pow(10, 12) && number < Math.pow(10, 15)) {
             // @ts-ignore
-            number = this.formateNumber(number, Math.pow(10, 12), subContent.gameTitles.unitDisplayQuadrillion[this.props.lang]);
+            number =formateNumber(number, Math.pow(10, 12), subContent.gameTitles.unitDisplayQuadrillion[props.lang]);
         }
         else if (number >= Math.pow(10, 15) && number < Math.pow(10, 18)) {
             // @ts-ignore
-            number = this.formateNumber(number, Math.pow(10, 15), subContent.gameTitles.unitDisplayQuintillion[this.props.lang]);
+            number =formateNumber(number, Math.pow(10, 15), subContent.gameTitles.unitDisplayQuintillion[props.lang]);
         }
         else if (number >= Math.pow(10, 18) && number < Math.pow(10, 21)) {
             // @ts-ignore
-            number = this.formateNumber(number, Math.pow(10, 18), subContent.gameTitles.unitDisplaySextillion[this.props.lang]);
+            number =formateNumber(number, Math.pow(10, 18), subContent.gameTitles.unitDisplaySextillion[props.lang]);
         }
         else if (number >= Math.pow(10, 21) && number < Math.pow(10, 24)) {
             // @ts-ignore
-            number = this.formateNumber(number, Math.pow(10, 21), subContent.gameTitles.unitDisplaySeptillion[this.props.lang]);
+            number =formateNumber(number, Math.pow(10, 21), subContent.gameTitles.unitDisplaySeptillion[props.lang]);
         }
         else if (number >= Math.pow(10, 24)) {
             // @ts-ignore
-            number = formateNumber(number, Math.pow(10, 24), subContent.gameTitles.unitDisplayZillion[this.props.lang]);
+            number = formateNumber(number, Math.pow(10, 24), subContent.gameTitles.unitDisplayZillion[props.lang]);
         }
         return number;
     }
@@ -219,7 +219,7 @@ const ButtonSubContentAutomaticProductivity = (props: ButtonSubContentProps) => 
             style={styleButton}><span className="hover-name">{props.name[props.lang]}</span><br />
             {
                 // @ts-ignore
-                props.cost > 0 ? checkNumber(props.cost) + currency : <strong>{freePrice}</strong>}<br />+ {props.machineProductivity * this.props.automaticProductivityPerMachine * props.machineQuantity}<br />{props.contentChild[props.lang]}
+                props.cost > 0 ? checkNumber(props.cost) + currency : <strong>{freePrice}</strong>}<br />+ {props.machineProductivity * props.automaticProductivityPerMachine * props.machineQuantity}<br />{props.contentChild[props.lang]}
             {(props.money < props.cost || props.numberOfSmallAutomaticMachines >= props.maximumSmallAutomaticMachine) ? <p className="cantAfford">{contentCantBuy}</p> : null}
         </div>
     )
