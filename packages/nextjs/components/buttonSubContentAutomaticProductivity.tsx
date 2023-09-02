@@ -200,7 +200,7 @@ const ButtonSubContentAutomaticProductivity = (props: ButtonSubContentProps) => 
     else if (props.currency == 'paperclips') {
         // @ts-ignore
         if (props.lang == 'en') {
-            currency = " Paperclips";
+            currency = "";
         }
         // @ts-ignore
         else if (props.lang == 'fr') {

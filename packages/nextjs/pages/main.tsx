@@ -175,7 +175,7 @@ class Main extends Component{
                 },
               after10creation: {
                 fr : "Trouvons une machine pour aller plus vite !",
-                en : "Let's produce more blocks !"
+                en : "Let's build blocks by clicking on the human icon on the left. If you don't see it, click on the Validate Transaction button first !"
               },
               after5sales: {
                 fr : "Tout faire à la main...c'est épuisant. Tu penses qu'il y aurait un autre moyen ?",
@@ -564,15 +564,15 @@ class Main extends Component{
               gameTitles: {
                 mainTitle : {
                   fr: "Le jeu des trombones",
-                  en: "The Block Production to Decentralization Game"
+                  en: "The Transaction Validation Playground"
                 },
                 dashboard : {
                   fr: "Tableau de bord",
-                  en: "Block Production",
+                  en: "Dashboard: Transaction Validation",
                 },
                 investment : {
                   fr:"Investissement",
-                  en:"investment"
+                  en:"Operations and Strategies"
                 },
                 machines : {
                   fr:"Machines",
@@ -592,7 +592,7 @@ class Main extends Component{
                 },
                 aiExecution : {
                   fr:"execution",
-                  en:"execution"
+                  en:"Expansion"
                 },
                 harvestingEarth : {
                   fr:"Matière planétaire à récolter: ",
@@ -632,7 +632,7 @@ class Main extends Component{
                 },
                 dashboardActivityTitle: {
                   fr: "Informations sur le marché",
-                  en: "Block Production"
+                  en: "Level of Decentralization"
                 },
                 marketShare : {
                   fr:"Parts de marché",
@@ -644,7 +644,7 @@ class Main extends Component{
                 },
                 numberOfCompetitors : {
                   fr :"Nombre de concurrents :",
-                  en: "Number of competitors :"
+                  en: "Number of Validators "
                 },
                 growth : {
                   fr: "Croissance",
@@ -726,7 +726,7 @@ class Main extends Component{
               mainButtons : {
                 mainButtonCreate : {
                   fr : "Créer",
-                  en : "Stake"
+                  en : "Send a Tx"
                 },
                 mainButtonPaperclipSingle : {
                   fr : "trombone",
@@ -800,7 +800,7 @@ class Main extends Component{
                 },
                 salesHireAManagerContent : {
                   fr:"Embaucher un manager (embauche un vendeur par seconde)",
-                  en:"Hire a Developer (Deploys 1 validating nodes per second)"
+                  en:"Hire a Developer (Deploys 1 validating node per second)"
                 },
                 investInRD : {
                   fr:"Investir dans la recherche",
@@ -824,7 +824,7 @@ class Main extends Component{
                 },
                 installSoftwareContent : {
                   fr:"Avec ce logiciel, nous pourrons mieux gérer notre production (+2000 ventes)",
-                  en:"With MEV, we will be able to manage all this transactions. (+2000 transaction validations)"
+                  en:"With MEV, we will be able to manage all these transactions. (+2000 transaction validations)"
                 },
                 factoryName : {
                   fr:"Usine de production",
