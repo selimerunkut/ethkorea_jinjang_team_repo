@@ -174,7 +174,7 @@ class Main extends Component{
                 },
               after10creation: {
                 fr : "Trouvons une machine pour aller plus vite !",
-                en : "Let's buy a machine to go faster !"
+                en : "Let's produce a block !"
               },
               after5sales: {
                 fr : "Tout faire à la main...c'est épuisant. Tu penses qu'il y aurait un autre moyen ?",
@@ -563,7 +563,7 @@ class Main extends Component{
               gameTitles: {
                 mainTitle : {
                   fr: "Le jeu des trombones",
-                  en: "The Paperclip Game"
+                  en: "The Block Production to Decentralization Game"
                 },
                 dashboard : {
                   fr: "Tableau de bord",
@@ -725,11 +725,11 @@ class Main extends Component{
               mainButtons : {
                 mainButtonCreate : {
                   fr : "Créer",
-                  en : "Create"
+                  en : "Stake"
                 },
                 mainButtonPaperclipSingle : {
                   fr : "trombone",
-                  en : "paperclip"
+                  en : "ether"
                 },
                 mainButtonPaperclipMultiple : {
                   fr : "trombones",
@@ -737,7 +737,7 @@ class Main extends Component{
                 },
                 sellButtonSell : {
                   fr : "Vendre",
-                  en : "Sell"
+                  en : "Block"
                 }
               },
               gameButtons : {
