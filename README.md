@@ -1,5 +1,8 @@
 # Daskalos
 
+The Playground is now online
+https://daskalos-eth-korea.vercel.app/main
+
 Setup tha app with the `Quickstart` section of this README.
 
 Visit the game on: `http://localhost:3000/main`
