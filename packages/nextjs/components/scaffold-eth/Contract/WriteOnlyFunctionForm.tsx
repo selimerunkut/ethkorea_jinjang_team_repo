@@ -32,6 +32,7 @@ export const WriteOnlyFunctionForm = ({ abiFunction, onChange, contractAddress }
     isLoading,
     writeAsync,
   } = useContractWrite({
+    
     chainId: getTargetNetwork().id,
     address: contractAddress,
     functionName: abiFunction.name,
