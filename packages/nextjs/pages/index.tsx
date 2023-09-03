@@ -4,6 +4,11 @@ import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { useAccount, useSignMessage } from 'wagmi';
 import { authenticate, generateChallenge } from '../utils';
 import { useEffect, useState } from 'react';
+import { useRouter } from "next/router";
+import Link from "next/link";
+import { redirect } from 'next/navigation'
+
+
 
 export default function Home() {
   const { data } = useAccount();
@@ -12,7 +17,24 @@ export default function Home() {
   const connected = !!data?.address;
   const { signMessageAsync } = useSignMessage();
   const [signedIn, setSignedIn] = useState(false);
+  
 
+  const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => {
+    const router = useRouter();
+    const isActive = router.pathname === href;
+  
+    return (
+      <Link
+        href={href}
+        passHref
+        className={`${
+          isActive ? "bg-secondary shadow-md" : ""
+        } hover:bg-secondary hover:shadow-md focus:!bg-secondary active:!text-neutral py-1.5 px-3 text-sm rounded-full gap-2 grid grid-flow-col`}
+      >
+        {children}
+      </Link>
+    );
+  };
 
   const signIn = async () => {
     try {
@@ -31,6 +53,8 @@ export default function Home() {
     }
   };
 
+  
+
 
   return (
     <>
@@ -43,7 +67,14 @@ export default function Home() {
 
         }}
       >
+        
         <ConnectButton label="Connect your Wallet to Sign In" />
+        {!connected && 
+        <NavLink href="/main">
+          
+          To the Game
+        </NavLink> 
+        }
 
 {/*         {!signedIn && (
           <button

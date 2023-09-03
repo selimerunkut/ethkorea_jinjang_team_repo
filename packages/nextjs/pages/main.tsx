@@ -18,7 +18,7 @@ class Main extends Component{
       super(props)
       this.state = {
           count : 0,
-          money : 4000000000000000,
+          money : 1,
           totalComputationalPowerAccumulated : 0,
           paperclipPrice : 0.25,
           marketingLevelOfInvestment : 2,
