@@ -18,7 +18,7 @@ const SellButton = (props: SellButtonProps) => {
 
         sellButton?.addEventListener('click', () => {
             if (props.count >= props.unitsSold) {
-                props.createAndRemoveGraphicEffect('+' + props.unitsSold * .25 + '€', 'sell-area', 'li', 'graphInput');
+                props.createAndRemoveGraphicEffect('+' + props.unitsSold * .25 + '⟠', 'sell-area', 'li', 'graphInput');
             }
             else {
                 props.createAndRemoveGraphicEffect('No Stock !', 'sell-area', 'li', 'redMessage');
@@ -31,7 +31,7 @@ const SellButton = (props: SellButtonProps) => {
         let sellButton = document?.getElementById('sell-button-id');
 
         sellButton?.removeEventListener('click', () => {
-            props.createAndRemoveGraphicEffect('+' + props.unitsSold * .25 + '€', 'sell-area', 'li', 'graphInput');
+            props.createAndRemoveGraphicEffect('+' + props.unitsSold * .25 + '⟠', 'sell-area', 'li', 'graphInput');
             props.createAndRemoveGraphicEffect('No Stock !', 'sell-area', 'li', 'graphInput');
         })
 

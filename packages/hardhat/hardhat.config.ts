@@ -106,6 +106,11 @@ const config: HardhatUserConfig = {
       url: "https://goerli.base.org",
       accounts: [deployerPrivateKey],
     },
+    lineaTestnet: {
+      url: "https://rpc.goerli.linea.build",
+      accounts: [deployerPrivateKey],
+    },
+    
   },
   verify: {
     etherscan: {

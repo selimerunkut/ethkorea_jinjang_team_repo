@@ -1,5 +1,3 @@
-node_modules
-
 # dependencies, yarn, etc
 # yarn / eslint
 .yarn/*
@@ -11,3 +9,5 @@ node_modules
 .eslintcache
 .vscode/**
 .DS_Store
+node_modules
+

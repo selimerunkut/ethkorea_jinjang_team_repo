@@ -2370,7 +2370,7 @@ changeLangage(language){
     <div className="main-content">
 
       <DivContent text={this.state.text.endText} lang={this.state.lang}/> 
-      <About text={this.state.text.aboutTextBox} lang={this.state.lang}/>
+      {/* <About text={this.state.text.aboutTextBox} lang={this.state.lang}/> */}
   
       <div className="left-div">
         <div>
@@ -2402,9 +2402,9 @@ changeLangage(language){
       </div>
       
     </div>
-    <footer>
+    {/* <footer>
       <p onClick={this.displayCredits}>{this.state.text.aboutTextBox.menuName[this.state.lang]}</p>
-    </footer>
+    </footer> */}
   </div>
   );
 }

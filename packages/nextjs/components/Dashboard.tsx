@@ -36,8 +36,8 @@ const Dashboard = (props: DashboardProps) => {
         <div className="dashboard-datas">
             <StockOfPaperclips stockOfPaperclips={props.stockOfPaperclips} checkNumber={props.checkNumber} />
             <DisplayMoney money={props.money} checkNumber={props.checkNumber} />
-            {props.boughtAnAutomaticMachine && <p className="data-title temporary-class-to-adjust-display" id="paragraphToUpdate"> Blocks Built <span className="data">{automaticProduction}</span></p>}
-            {props.hasHiredaSalesman && <p className="data-title">{props.text.gameTitles.sales[props.lang]}<span className="data">{automaticSales}</span></p>}
+            {props.boughtAnAutomaticMachine && <p className="data-title temporary-class-to-adjust-display" id="paragraphToUpdate"> Transaction Flow to ETH Nodes <span className="data">{automaticProduction} Tx</span></p>}
+            {props.hasHiredaSalesman && <p className="data-title">{props.text.gameTitles.sales[props.lang]}<span className="data">{automaticSales} blocks</span></p>}
         </div>
     </div>
     );

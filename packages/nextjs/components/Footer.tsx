@@ -20,15 +20,15 @@ export const Footer = () => {
             {nativeCurrencyPrice > 0 && (
               <div className="btn btn-primary btn-sm font-normal cursor-auto gap-0">
                 <CurrencyDollarIcon className="h-4 w-4 mr-0.5" />
-                <span>{nativeCurrencyPrice}</span>
+                <span>{/*nativeCurrencyPrice*/}</span>
               </div>
             )}
-            {getTargetNetwork().id === hardhat.id && <Faucet />}
+            {/*getTargetNetwork().id === hardhat.id && <Faucet />*/}
           </div>
           <SwitchTheme className="pointer-events-auto" />
         </div>
       </div>
-      <div className="w-full">
+      {/* <div className="w-full">
         <ul className="menu menu-horizontal w-full">
           <div className="flex justify-center items-center gap-2 text-sm w-full">
             <div className="text-center">
@@ -68,7 +68,7 @@ export const Footer = () => {
             </div>
           </div>
         </ul>
-      </div>
+      </div> */}
     </div>
   );
 };

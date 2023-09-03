@@ -13,7 +13,7 @@ const DisplayMoney = (props: DisplayMoneyProps) => {
 
     let money = props.checkNumber(props.money) as string;
 
-    return <p className="display-money data-title">Total Balance <span className="data">{money} €</span></p>;
+    return <p className="display-money data-title">Total Balance <span className="data">{money} ⟠</span></p>;
 
 }
 

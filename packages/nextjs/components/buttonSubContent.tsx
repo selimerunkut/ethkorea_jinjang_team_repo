@@ -188,7 +188,7 @@ const ButtonSubContent = (props: ButtonSubContentProps) => {
     //Displaying the right currency (euros or computationnal power)
     let currency: string = "";
     if (props.currency === undefined) {
-        currency = " €";
+        currency = " ⟠";
     }
     else if (props.currency == 'computational') {
         if (props.lang == 'en') {

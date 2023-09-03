@@ -182,7 +182,7 @@ const ButtonSubContentAutomaticProductivity = (props: ButtonSubContentProps) => 
     let currency: string = "";
     // @ts-ignore
     if (props.currency === undefined) {
-        currency = " €";
+        currency = " ⟠";
     }
     // @ts-ignore
     else if (props.currency == 'computational') {
