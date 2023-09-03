@@ -1,6 +1,6 @@
 # Daskalos
 
-Setup tha app with Quickstart the
+Setup tha app with the `Quickstart` section of this README.
 
 Visit the game on: `http://localhost:3000/main`
 
