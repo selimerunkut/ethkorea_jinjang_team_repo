@@ -1,6 +1,6 @@
 # Daskalos
 
-The Playground is now online
+## The Playground is now online
 https://daskalos-eth-korea.vercel.app/main
 
 Setup tha app with the `Quickstart` section of this README.
