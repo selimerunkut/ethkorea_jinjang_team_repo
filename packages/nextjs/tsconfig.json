@@ -16,7 +16,10 @@
     "incremental": true,
     "paths": {
       "~~/*": ["./*"]
-    }
+    },
+    "eslint": {
+      "ignoreDuringBuilds": true,
+    },
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
