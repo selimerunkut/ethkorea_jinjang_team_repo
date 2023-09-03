@@ -1,4 +1,17 @@
-# 🏗 Scaffold-ETH 2
+# Daskalos
+
+Setup tha app with Quickstart the
+
+Visit the game on: `http://localhost:3000/main`
+
+## Example staking contracts deployed to linea:
+
+### Staking Contract:
+https://goerli.lineascan.build/address/0x6A891b2022F934B3C86C5282fdf8975884C2f055
+
+### Reward Token:
+https://goerli.lineascan.build/address/0x957D4F3FbBfFfdfb70dB24e71786F35766B5e7aA
+## Built with 🏗 Scaffold-ETH 2
 
 <h4 align="center">
   <a href="https://docs.scaffoldeth.io">Documentation</a> |
