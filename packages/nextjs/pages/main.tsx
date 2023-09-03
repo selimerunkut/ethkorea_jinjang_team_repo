@@ -620,7 +620,7 @@ class Main extends Component{
                 },
                 worboxFactories: {
                   fr:"Usines de production",
-                  en:"L2 Cahins Using Ethereum"
+                  en:"L2 Chains Using Ethereum"
                 },
                 worboxManagers: {
                   fr:"Managers",
@@ -828,7 +828,7 @@ class Main extends Component{
                 },
                 factoryName : {
                   fr:"Usine de production",
-                  en:"City Using Etherum"
+                  en:"Small L2 Chain Using Ethereum"
                 },
                 findNewsWaysToMakePaperclips : {
                   fr: "Penser de nouvelles façons de produire des trombones.",
@@ -896,7 +896,7 @@ class Main extends Component{
                 },
                 factoryPaperclipName : {
                   fr :"Usine de production",
-                  en: "Mega City Using Etherum"
+                  en: "Big L2 Chain Using Ethereum"
                 },
                 factory50PaperclipName : {
                   fr :"Créer 50 usines de production",
